@@ -1,0 +1,120 @@
+IoT-Based Automatic Medicine Reminder and Dispenser Box
+📌 Project Overview
+
+The IoT-Based Automatic Medicine Reminder and Disenser Box is a smart healthcare solution designed to help patients take medicines on time without manual supervision. The system automatically alerts the user with a buzzer, opens the correct medicine box, and sends real-time mobile notifications using Arduino Cloud.
+
+This project is especially useful for:
+
+Elderly patients
+
+Busy individuals
+
+Hospitals and home care
+
+Chronic disease patients
+
+🎯 Objectives
+
+Automate medicine reminders for fixed daily schedules
+
+Reduce missed doses and human error
+
+Provide remote control via mobile application
+
+Improve healthcare adherence using IoT technology
+
+⚙️ System Features
+
+✅ Automatic medicine reminders at:
+
+Breakfast – 08:00 AM
+
+Lunch – 01:30 PM
+
+Dinner – 08:00 PM
+
+✅ Rhythmic buzzer alert when reminder is due
+✅ Automatic opening of correct medicine box for 5 minutes
+✅ Mobile notification via Arduino Cloud
+✅ Manual control from mobile app
+✅ Real-time clock-based scheduling
+✅ LCD display for system status and current time
+
+🧰 Hardware Components
+Component	Description
+ESP8266 NodeMCU (ESP-12E)	Main microcontroller with WiFi
+DS3231 RTC Module	Precision real-time clock
+16x2 I2C LCD	Displays time and system status
+SG90 Servo Motors (x3)	Opens medicine compartments
+Passive Buzzer	Alert sound indicator
+External 5V Power Supply	Servo power source
+💻 Software & Technologies
+
+Arduino IoT Cloud
+
+Arduino IDE / Arduino Cloud Editor
+
+Arduino IoT Mobile App
+
+Embedded C++
+
+Libraries Used:
+
+RTClib
+
+LiquidCrystal_I2C
+
+Servo
+
+ArduinoIoTCloud
+
+☁️ IoT Cloud Functionality
+
+Cloud Variables Used (Free Plan – 3 Variables):
+
+reminderCode (int) – Triggers notification
+
+remoteBox (int) – Remote box selection
+
+buzzerControl (bool) – Buzzer activation
+
+Mobile App Capabilities:
+
+Receive push notifications
+
+Manually open any medicine box
+
+Activate buzzer remotely
+
+🔧 Working Process
+
+DS3231 RTC continuously tracks real-time.
+
+When scheduled time arrives:
+
+Buzzer plays rhythmic sound
+
+Corresponding servo opens box
+
+Notification sent to user’s phone
+
+Box remains open for 5 minutes.
+
+User can also operate buzzer and box remotely from the Arduino Cloud app.
+
+🔄 System Flow
+RTC Time Check → Reminder Match → 
+Buzzer Alert → Servo Opens Box → 
+Cloud Notification → Auto Close After 5 Minutes
+
+📱 Dashboard Controls
+
+🔘 Buzzer Button (ON/OFF)
+
+🔢 Box Selector (0–3)
+
+1 = Breakfast
+
+2 = Lunch
+
+3 = Dinner
